@@ -192,7 +192,7 @@ addRadio("Hard", panel2, life1);
     var hint = new BABYLON.GUI.TextBlock("hint");
     hint.textWrapping = true;
     hint.fontFamily = "Lucida Console";
-    hint.text = "Welcome! Press space bar to on/off lights";
+    hint.text = "Welcome! Press M to on/off lights";
     hint.color = "white";
 
     rect2.addControl(hint);
@@ -382,7 +382,7 @@ addRadio("Hard", panel2, life1);
         //ANIMATIONS - SHOT
         document.body.onclick = function () {
             if(amo > 0 && scene.animationGroups[0].isPlaying !== true){
-                scene.animationGroups[0].start(false, 1.0, 8.035, 0.4);
+                //scene.animationGroups[0].start(false, 1.0, 8.035, 0.4);
                 gunshot.play();
                 amo = amo - 25;
                 firebullet();
@@ -392,9 +392,9 @@ addRadio("Hard", panel2, life1);
         //ANIMATIONS - RELOAD 
         document.body.onkeydown = function(event){
             if(event.keyCode === 82 && amo <= 75 && scene.animationGroups[0].isPlaying !== true){
-                scene.animationGroups[0].start(false, 1, 0.8, 6.4);
+                //scene.animationGroups[0].start(false, 1, 0.8, 6.4);
                 reload.play();
-                scene.animationGroups[0].start(false, 1, 2.8, 2.4);
+                //scene.animationGroups[0].start(false, 1, 2.8, 2.4);
                 amo = 100;
             }
         }
@@ -1263,12 +1263,12 @@ window.addEventListener("keydown", function(event) { //INIZIO GIOCO NELL'ARENA, 
     }
 });
 
-window.addEventListener("keydown",function(event){
+/*window.addEventListener("keydown",function(event){
     if(event.keyCode === 71) {
         hitbox.position.x = 230;
         hitbox.position.z = 280;
     }
-});
+});*/
 
 
 // run the render loop
